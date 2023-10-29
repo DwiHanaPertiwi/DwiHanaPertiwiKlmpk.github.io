@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President Suite</title>
+    <!-- Tambahkan Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navbar dengan efek transparan -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Kamar President Suite</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">President Suite</h2>
+        <p class="lead text-center">Tersedia 1 Kamar</p>
+
+        <!-- Carousel untuk gambar geser -->
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="President Suite1.jpg" class="d-block w-100" alt="President Suite Room 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="President Suite2.jpg" class="d-block w-100" alt="President Suite Room 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="President Suite3.jpg" class="d-block w-100" alt="President Suite Room 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <p>Kamar President Suite adalah pilihan mewah yang menyediakan sistem reservasi di seluruh dunia, Asisten Manajer yang bertugas, Petugas Hubungan Tamu, dan fasilitas tamu Standar Layanan Pramutamu yang lengkap. Anda juga akan menikmati layanan laundry dan dry cleaning harian, brankas dalam kamar, layanan kamar 24 jam, dokter panggilan 24 jam, transfer bandara, layanan pertemuan, tiket maskapai penerbangan, dan fasilitas valet atau parkir mandiri.</p>
+                <!-- Fasilitas -->
+                <h3>Fasilitas</h3>
+                <ul>
+                    <li>Tempat Tidur King</li>
+                    <li>Pemandangan Kota</li>
+                    <li>Hotspot dan Kabel TV</li>
+                    <li>Sarapan Gratis</li>
+                    <li>Kontrol AC</li>
+                    <li>Detektor Asap</li>
+                    <li>IDD Direct Dial</li>
+                    <li>Mini Bar</li>
+                    <li>Pembuat Kopi & Teh</li>
+                    <li>Jubah Mandi</li>
+                    <li>Pengering Rambut</li>
+                    <li>Sistem Penyiram</li>
+                </ul>
+
+                <!-- Tombol "Pesan" yang akan memunculkan modal pemesanan -->
+                <button type="button" class="btn btn-primary btn-lg mt-3" data-toggle="modal" data-target="#modalPresidentSuite">
+                    Pesan Kamar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pemesanan Kamar President Suite -->
+    <div class="modal fade" id="modalPresidentSuite" tabindex="-1" role="dialog" aria-labelledby="modalPresidentSuiteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalPresidentSuiteLabel">Pesan Kamar President Suite</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulir pemesanan dengan tampilan yang menarik -->
+                    <form action="proses_pemesanan.php" method="POST">
+                        <div class="form-group">
+                            <label for="nama">Nama:</label>
+                            <input type="text" class="form-control" id="nama" name="nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal_checkin">Tanggal Check-in:</label>
+                            <input type="date" class="form-control" id="tanggal_checkin" name="tanggal_checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jumlah_tamu">Jumlah Tamu:</label>
+                            <input type="number" class="form-control" id="jumlah_tamu" name="jumlah_tamu" required>
+                        </div>
+                        <!-- ... Tambahkan input lain sesuai kebutuhan ... -->
+                        <button type="submit" class="btn btn-primary btn-block">Pesan Kamar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tautan kembali ke beranda -->
+    <div class="container text-center mt-4">
+        <a href="Index.html" class="btn btn-primary">Kembali ke Beranda</a>
+    </div>
+
+    <!-- Tambahkan Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamar Deluxe</title>
+    <!-- Tambahkan Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Tambahkan CSS kustom -->
+    <style>
+        .room-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar dengan efek transparan -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Kamar Deluxe</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">Deluxe Room</h1>
+        <p class="lead text-center">Tersedia 3 Kamar</p>
+
+        <!-- Kamar Deluxe King -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Deluxe King</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Carousel untuk gambar yang dapat digeser -->
+                  <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                         <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                         <li data-target="#imageCarousel" data-slide-to="1"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                         <div class="carousel-item active">
+                             <img src="delux king1.jpg" class="d-block w-100 room-image" alt="Gambar Kamar 1">
+                         </div>
+                         <div class="carousel-item">
+                             <img src="delux king3.jpg" class="d-block w-100 room-image" alt="Gambar Kamar 2">
+                         </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Sebelumnya</span>
+                     </a>
+                     <a class="carousel-control-next" href"#imageCarousel" role="button" data-slide="next">
+                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Selanjutnya</span>
+                     </a>
+                 </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Pemandangan kota</li>
+                            <li>Tempat Tidur King (180 x 200)</li>
+                            <li>Kamar Merokok & Bebas Rokok</li>
+                            <li>Gratis 2 botol air mineral</li>
+                            <li>Teh dan kopi</li>
+                        </ul>
+                        <p class="text-muted">
+                            Okupansi maksimal: 3 Orang
+                            <br>
+                            Peralatan Digital: Saluran Film Kabel, Layar LCD/Plasma, WiFi gratis, Akses internet gratis
+                        </p>
+                        <p class="text-muted">
+                            Fasilitas: AC, Surat Kabar Harian, Telepon SLI, Kunci pintu elektronik, Detektor asap elektronik, Tempat tidur tambahan, Layanan binatu, Mini Bar, Brankas, Kulkas, Pembuat teh dan kopi, Setrika dan papan (Berdasarkan permintaan), Meja kerja, Sandal, Parket, Kopi bubuk segar dan teh daun lepas, Brankas Dalam Kamar, Tempat Tidur Lipat Maksimum Dibolehkan, Kamar Bebas-Rokok tersedia, Kamar Merokok tersedia, Ketel Listrik
+                        </p>
+                    </div>
+                </div>
+                <!-- Tombol "Pesan" yang akan memunculkan modal pemesanan -->
+                <button type="button" class="btn btn-primary btn-lg mt-3" data-toggle="modal" data-target="#modalDeluxeKing">
+                    Pesan Kamar
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal Pemesanan Kamar Deluxe King -->
+        <div class="modal fade" id="modalDeluxeKing" tabindex="-1" role="dialog" aria-labelledby="modalDeluxeKingLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="modalDeluxeKingLabel">Pesan Kamar Deluxe King</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="text-white">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="proses_pemesanan.php" method="POST">
+                            <div class="form-group">
+                                <label for="nama">Nama:</label>
+                                <input type="text" class="form-control" id="nama" name="nama" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Tanggal Check in:</label>
+                              <input type="email" class="form-control" id="email" name="email" required>
+                          </div>
+                          <div class="form-group">
+                           <label for="email">Jumlah Tamu:</label>
+                           <input type="email" class="form-control" id="email" name="email" required>
+                       </div>
+                            <button type="submit" class="btn btn-primary btn-block">Pesan Kamar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+         <div class="card-body">
+             <h2 class="card-title">Deluxe Twin</h2>
+             <div class="row">
+               <div class="col-lg-6">
+                  <!-- Carousel untuk gambar yang dapat digeser -->
+                  <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                          <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#imageCarousel" data-slide-to="1"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="deluxetwin1.jpg" class="d-block w-100 room-image" alt="Gambar Kamar 1">
+                          </div>
+                          
+                      </div>
+                      <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Sebelumnya</span>
+                      </a>
+                      <a class="carousel-control-next" href"#imageCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Selanjutnya</span>
+                      </a>
+                  </div>
+              </div>
+                 <div class="col-md-6">
+                     <ul>
+                        <li>Pemandangan kota</li>
+                        <li>Kasur kembar</li>
+                        <li>Kamar Merokok & Bebas Rokok</li>
+                        <li>Gratis 2 botol air mineral</li>
+                        <li>24 meter persegi</li>
+                     </ul>
+                     <p class="text-muted">
+                        <p>Okupansi maksimal: 3 Orang</p>
+                <p>Peralatan Digital: Saluran Film Kabel, Layar LCD/Plasma, WiFi gratis, Akses internet gratis</p>
+                <p>Fasilitas: AC, Surat Kabar Harian, Telepon SLI, Kunci pintu elektronik, Detektor asap elektronik, Tempat tidur tambahan, Layanan binatu, Mini Bar, Brankas, Kulkas, Pembuat teh dan kopi, Setrika dan papan (Berdasarkan permintaan), Meja kerja, Sandal, Parket, Kopi bubuk segar dan teh daun lepas, Brankas Dalam Kamar, Kamar bebas asap rokok tersedia, Kamar merokok tersedia, Ketel Listrik</p>
+                 </div>
+             </div>
+             <!-- Tombol "Pesan" yang akan memunculkan modal pemesanan -->
+             <button type="button" class="btn btn-primary btn-lg mt-3" data-toggle="modal" data-target="#modalDeluxeKing">
+               Pesan Kamar
+           </button>
+       </div>
+   </div>
+
+   <!-- Modal Pemesanan Kamar Deluxe King -->
+   <div class="modal fade" id="modalDeluxeKing" tabindex="-1" role="dialog" aria-labelledby="modalDeluxeKingLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-centered" role="document">
+           <div class="modal-content">
+               <div class="modal-header bg-primary text-white">
+                   <h5 class="modal-title" id="modalDeluxeKingLabel">Pesan Kamar Deluxe twin</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true" class="text-white">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">
+                   <form action="proses_pemesanan.php" method="POST">
+                       <div class="form-group">
+                           <label for="nama">Nama:</label>
+                           <input type="text" class="form-control" id="nama" name="nama" required>
+                       </div>
+                       <div class="form-group">
+                           <label for="email">Email:</label>
+                           <input type="email" class="form-control" id="email" name="email" required>
+                       </div>
+                       <div class="form-group">
+                         <label for="email">Tanggal Check in:</label>
+                         <input type="email" class="form-control" id="email" name="email" required>
+                     </div>
+                     <div class="form-group">
+                      <label for="email">Jumlah Tamu:</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                       <button type="submit" class="btn btn-primary btn-block">Pesan Kamar</button>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <div class="card mt-4">
+      <div class="card-body">
+          <h2 class="card-title">Deluxe Pool View</h2>
+          <div class="row">
+              <div class="col-md-6">
+                  <!-- Carousel untuk gambar yang dapat digeser -->
+            <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                   <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                   <li data-target="#imageCarousel" data-slide-to="1"></li>
+               </ol>
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img src="deluxepoolview1.jpg" class="d-block w-100 room-image" alt="Gambar Kamar 1">
+                   </div>
+                   <div class="carousel-item">
+                       <img src="deluxepoolview2.jpg" class="d-block w-100 room-image" alt="Gambar Kamar 2">
+                   </div>
+               </div>
+               <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Sebelumnya</span>
+               </a>
+               <a class="carousel-control-next" href"#imageCarousel" role="button" data-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Selanjutnya</span>
+               </a>
+           </div>
+              </div>
+              <div class="col-md-6">
+                  <ul>
+                     <li>32 meter persegi</li>
+                     <li>Fasilitas teh dan kopi</li>
+                     <li>Pemandangan kolam renang</li>
+                     <li>Tempat Tidur King atau Twin</li>
+                     <li>Karpet</li>
+                     <li>Air mineral kemasan gratis</li>
+                     <li>Balkon</li>
+                  </ul>
+                  <p class="text-muted">
+                      Okupansi maksimal: 3 Orang
+                      <br>
+                      Peralatan Digital: Saluran Film Kabel, Layar LCD/Plasma, WiFi gratis, Akses internet gratis
+                  </p>
+                  <p class="text-muted">
+                     Fasilitas: AC, Jubah mandi, Surat Kabar Harian, Telepon SLI, Kunci pintu elektronik, Detektor asap elektronik, Layanan binatu, Mini Bar, Brankas, Balkon, Kulkas, Pembuat teh dan kopi, Setrika dan papan (Berdasarkan permintaan), Meja kerja, Sandal, Parket, Kopi bubuk segar dan teh daun lepas, Brankas Dalam Kamar, Kamar bebas asap rokok tersedia, Kamar merokok tersedia, Ketel Listrik
+                  </p>
+              </div>
+          </div>
+          <!-- Tombol "Pesan" yang akan memunculkan modal pemesanan -->
+          <button type="button" class="btn btn-primary btn-lg mt-3" data-toggle="modal" data-target="#modalDeluxeKing">
+              Pesan Kamar
+          </button>
+      </div>
+  </div>
+
+  <!-- Modal Pemesanan Kamar Deluxe King -->
+  <div class="modal fade" id="modalDeluxeKing" tabindex="-1" role="dialog" aria-labelledby="modalDeluxeKingLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                  <h5 class="modal-title" id="modalDeluxeKingLabel">Pesan Kamar pool view</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" class="text-white">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form action="proses_pemesanan.php" method="POST">
+                      <div class="form-group">
+                          <label for="nama">Nama:</label>
+                          <input type="text" class="form-control" id="nama" name="nama" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email" name="email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Tanggal Check in:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                     <label for="email">Jumlah Tamu:</label>
+                     <input type="email" class="form-control" id="email" name="email" required>
+                 </div>
+                      <button type="submit" class="btn btn-primary btn-block">Pesan Kamar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    </div>
+
+    <!-- Tautan kembali ke beranda -->
+    <div class="container text-center mt-4">
+        <a href="Index.html" class="btn btn-primary">Kembali ke Beranda</a>
+    </div>
+
+    <!-- Tambahkan Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
